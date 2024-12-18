@@ -24,9 +24,13 @@ def ask(word, dont_remember_list):
         dontRemember(word, dont_remember_list)
 
 def firstAsk(words_list, dont_remember_list):
+    already_asked = []
     for time in range(len(words_list)):
         word = random.choice(words_list)
+        while word in already_asked:
+            word = random.choice(words_list)
         ask(word, dont_remember_list)
+        already_asked.append(word)
 
 def reviewAll(dont_remember_list):
     while len(dont_remember_list) != 0:
