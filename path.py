@@ -1,1 +1,1 @@
-HKI = "file\HKI.txt"
+VOCABULARY = "file/tu_vung.txt"
